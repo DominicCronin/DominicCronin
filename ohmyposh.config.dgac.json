@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{.Folder}}{{if .Root}}:admin{{end}}:{{.Shell}}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#61AFEF",
+          "options": {
+            "style": "agnoster"            
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "foreground": "#193549",
+          "background": "#fffb38",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "fetch_status": true
+          }
+        },
+        {
+          "type": "dotnet",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#6CA35E",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "display_version": true,
+            "prefix": " \ue70c "
+          }
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "foreground": "#e8098b",
+          "background": "#ffffff",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+        "type": "status",
+        "style": "powerline",
+        "foreground": "#ffffff",
+        "background": "#d32f2f",
+        "powerline_symbol": "\ue0b0",
+        "trailing_diamond": "\ue0b4",
+        "options": {
+            "always_enabled": false,
+            "status_template": "\uf071 {{ reason .Code }}"
+          }
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "#ffffff",
+          "background": "#35a55e",         
+          "options": {
+            "display_mode": "environment",
+            "display_version": false,
+            "home_enabled": false, 
+            "folder_name_fallback": false
+          }
+        }
+      ]
+    }
+  ],
+  "version": 4,
+  "final_space": true
+}
